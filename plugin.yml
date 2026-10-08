@@ -1,0 +1,50 @@
+# ============================================
+# Filament Plugin - Create Plugin Form
+# jeffersongoncalves - filamentphp.com
+# ============================================
+
+# --- Details ---
+name: "Translation Manager"
+slug: "translation-manager"
+github_repository: "jeffersongoncalves/filament-translation-manager"
+description: "Edit app, JSON and vendor package translations from the panel, find missing keys per locale and export back to lang files."
+
+# --- Images ---
+# Anexe os arquivos de imagem junto com este YAML no chat
+image: "jeffersongoncalves-filament-translation-manager.png"
+thumbnail: ""
+
+# --- Compatibility & Features ---
+versions:
+  - "v3"
+  - "v4"
+  - "v5"
+
+categories:
+  - "Developer Tool"
+
+dark_theme_support: true
+translation_support: true
+
+# --- Documentation ---
+documentation_url: ""
+
+versioned_documentation:
+  - version: "v3"
+    url: "https://raw.githubusercontent.com/jeffersongoncalves/filament-translation-manager/1.x/README.md"
+  - version: "v4"
+    url: "https://raw.githubusercontent.com/jeffersongoncalves/filament-translation-manager/2.x/README.md"
+  - version: "v5"
+    url: "https://raw.githubusercontent.com/jeffersongoncalves/filament-translation-manager/3.x/README.md"
+
+documentation_content: ""
+
+# --- URLs ---
+website: ""
+discord: ""
+
+# --- Pricing ---
+anystack_product_id: ""
+
+# --- Acao Final ---
+action: "draft"
