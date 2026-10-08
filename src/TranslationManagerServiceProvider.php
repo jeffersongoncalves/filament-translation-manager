@@ -11,8 +11,6 @@ class TranslationManagerServiceProvider extends PackageServiceProvider
     {
         $package
             ->name('filament-translation-manager')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigrations();
+            ->hasTranslations();
     }
 }

@@ -1,3 +1,5 @@
 <?php
 
-uses(JeffersonGoncalves\Filament\TranslationManager\Tests\TestCase::class)->in('Feature');
+use JeffersonGoncalves\Filament\TranslationManager\Tests\TestCase;
+
+uses(TestCase::class)->in(__DIR__);
