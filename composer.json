@@ -1,57 +1,60 @@
 {
     "name": "jeffersongoncalves/filament-translation-manager",
-    "description": "Filament translation manager for Filament 3, 4 and 5: edit app, JSON and vendor package translations from the panel, filter missing keys per locale and export the result back to lang files.",
+    "description": "Translation manager for Filament: edit app, JSON and vendor package translations from the panel, filter the keys missing per locale and export the result back to lang files.",
     "keywords": [
+        "jeffersongoncalves",
         "laravel",
         "filament",
         "filament-plugin",
         "filament-translation-manager",
         "translations",
+        "translation-manager",
         "localization",
         "i18n"
     ],
     "homepage": "https://github.com/jeffersongoncalves/filament-translation-manager",
     "license": "MIT",
-    "type": "library",
     "authors": [
         {
-            "name": "Jefferson Simão Gonçalves",
+            "name": "Jefferson Gonçalves",
             "email": "gerson.simao.92@gmail.com",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.2",
-        "filament/filament": "^4.0",
-        "spatie/laravel-package-tools": "^1.16",
-        "jeffersongoncalves/laravel-translation-manager": "^1.0"
+        "filament/filament": "^4.8",
+        "jeffersongoncalves/laravel-translation-manager": "^1.0",
+        "spatie/laravel-package-tools": "^1.16"
     },
     "require-dev": {
-        "orchestra/testbench": "^9.0|^10.0",
+        "larastan/larastan": "^3.0",
+        "laravel/pint": "^1.0",
+        "orchestra/testbench": "^10.0|^11.0",
         "pestphp/pest": "^3.0|^4.0",
-        "larastan/larastan": "^2.0|^3.0",
-        "laravel/pint": "^1.0"
+        "pestphp/pest-plugin-laravel": "^3.0|^4.0"
     },
     "autoload": {
         "psr-4": {
-            "JeffersonGoncalves\\Filament\\TranslationManager\\": "src/"
+            "JeffersonGoncalves\\Filament\\TranslationManager\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "JeffersonGoncalves\\Filament\\TranslationManager\\Tests\\": "tests/"
+            "JeffersonGoncalves\\Filament\\TranslationManager\\Tests\\": "tests"
         }
     },
     "scripts": {
+        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
+        "analyse": "vendor/bin/phpstan analyse",
         "test": "vendor/bin/pest",
-        "test-coverage": "vendor/bin/pest --coverage",
-        "format": "vendor/bin/pint",
-        "analyse": "vendor/bin/phpstan analyse"
+        "format": "vendor/bin/pint"
     },
     "config": {
         "sort-packages": true,
         "allow-plugins": {
-            "pestphp/pest-plugin": true
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
         }
     },
     "extra": {
