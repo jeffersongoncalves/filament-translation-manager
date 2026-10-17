@@ -36,6 +36,7 @@ Built on [jeffersongoncalves/laravel-translation-manager](https://github.com/jef
 
 ```bash
 composer require jeffersongoncalves/filament-translation-manager:"^1.0"
+php artisan vendor:publish --tag="translation-manager-migrations"
 php artisan migrate
 php artisan translation-manager:scan
 ```
