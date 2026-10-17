@@ -16,14 +16,16 @@ use Filament\Widgets\WidgetsServiceProvider;
 use Illuminate\Support\Facades\File;
 use JeffersonGoncalves\Filament\TranslationManager\Tests\Fixtures\TestPanelProvider;
 use JeffersonGoncalves\Filament\TranslationManager\TranslationManagerServiceProvider;
+use JeffersonGoncalves\PestPluginDatabaseMigrations\LoadsPackageMigrations;
 use JeffersonGoncalves\TranslationManager\TranslationManagerServiceProvider as LaravelTranslationManagerServiceProvider;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
-use ReflectionClass;
 use RyanChandler\BladeCaptureDirective\BladeCaptureDirectiveServiceProvider;
 
 class TestCase extends Orchestra
 {
+    use LoadsPackageMigrations;
+
     protected string $langPath;
 
     protected function getPackageProviders($app): array
@@ -78,7 +80,7 @@ class TestCase extends Orchestra
 
     protected function defineDatabaseMigrations(): void
     {
-        $this->loadMigrationsFrom(dirname((string) (new ReflectionClass(LaravelTranslationManagerServiceProvider::class))->getFileName()).'/../database/migrations');
+        $this->loadPackageMigrations(LaravelTranslationManagerServiceProvider::class);
     }
 
     protected function tearDown(): void
