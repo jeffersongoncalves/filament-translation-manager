@@ -7,6 +7,7 @@ Filament resource for jeffersongoncalves/laravel-translation-manager: edit app, 
 @verbatim
 <code-snippet name="Install the plugin" lang="bash">
 composer require jeffersongoncalves/filament-translation-manager:"^3.0"
+php artisan vendor:publish --tag="translation-manager-migrations"
 php artisan migrate
 php artisan translation-manager:scan
 </code-snippet>
